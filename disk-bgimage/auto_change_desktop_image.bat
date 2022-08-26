@@ -1,0 +1,1 @@
+python E:\pythonProject02\disk-bgimage\auto_change_desktop_image.py

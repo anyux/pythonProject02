@@ -1,0 +1,20 @@
+Dec 17 15:53:02 1-22-master-1 journal: 2021-12-17 07:53:02.499 [INFO][72] felix/summary.go 100: Summarising 10 dataplane reconciliation loops over 1m5.7s: avg=2ms longest=5ms (resync-filter-v4)
+Dec 17 15:53:17 1-22-master-1 journal: 2021-12-17 07:53:17.080 [INFO][70] monitor-addresses/startup.go 713: Using autodetected IPv4 address on interface ens33: 192.168.255.200/24
+Dec 17 15:53:25 1-22-master-1 journal: 2021-12-17 07:53:25.676 [INFO][74] confd/watchercache.go 97: Watch channel closed by remote - recreate watcher ListRoot="/calico/resources/v3/projectcalico.org/bgpconfigurations"
+Dec 17 15:54:05 1-22-master-1 journal: 2021-12-17 07:54:05.027 [INFO][72] felix/summary.go 100: Summarising 10 dataplane reconciliation loops over 1m2.5s: avg=2ms longest=4ms (resync-nat-v4)
+Dec 17 15:54:17 1-22-master-1 journal: 2021-12-17 07:54:17.083 [INFO][70] monitor-addresses/startup.go 713: Using autodetected IPv4 address on interface ens33: 192.168.255.200/24
+Dec 17 15:54:32 1-22-master-1 journal: 2021-12-17 07:54:32.025 [INFO][72] felix/watchercache.go 97: Watch channel closed by remote - recreate watcher ListRoot="/calico/resources/v3/projectcalico.org/workloadendpoints"
+Dec 17 15:55:09 1-22-master-1 journal: 2021-12-17 07:55:09.319 [INFO][72] felix/summary.go 100: Summarising 10 dataplane reconciliation loops over 1m4.3s: avg=2ms longest=4ms (resync-nat-v4)
+Dec 17 15:55:17 1-22-master-1 journal: 2021-12-17 07:55:17.084 [INFO][70] monitor-addresses/startup.go 713: Using autodetected IPv4 address on interface ens33: 192.168.255.200/24
+Dec 17 15:55:26 1-22-master-1 journal: 2021-12-17 07:55:26.164 [INFO][72] felix/watchercache.go 97: Watch channel closed by remote - recreate watcher ListRoot="/calico/ipam/v2/assignment/"
+Dec 17 15:55:26 1-22-master-1 journal: 2021-12-17 07:55:26.165 [INFO][72] felix/watchercache.go 122: Watch error received from Upstream ListRoot="/calico/ipam/v2/assignment/" error=too old resource version: 4152 (524298)
+Dec 17 15:55:26 1-22-master-1 journal: 2021-12-17 07:55:26.165 [INFO][72] felix/watchercache.go 175: Full resync is required ListRoot="/calico/ipam/v2/assignment/"
+Dec 17 15:56:00 1-22-master-1 journal: 2021-12-17 07:56:00.915 [INFO][72] felix/watchercache.go 97: Watch channel closed by remote - recreate watcher ListRoot="/calico/resources/v3/projectcalico.org/globalnetworksets"
+Dec 17 15:56:11 1-22-master-1 journal: 2021-12-17 07:56:11.219 [INFO][72] felix/summary.go 100: Summarising 8 dataplane reconciliation loops over 1m1.9s: avg=2ms longest=4ms (resync-filter-v4)
+Dec 17 15:56:16 1-22-master-1 journal: 2021-12-17 07:56:16.247 [INFO][72] felix/watchercache.go 97: Watch channel closed by remote - recreate watcher ListRoot="/calico/resources/v3/projectcalico.org/felixconfigurations"
+Dec 17 15:56:17 1-22-master-1 journal: 2021-12-17 07:56:17.086 [INFO][70] monitor-addresses/startup.go 713: Using autodetected IPv4 address on interface ens33: 192.168.255.200/24
+Dec 17 15:56:20 1-22-master-1 systemd: Created slice User Slice of root.
+Dec 17 15:56:20 1-22-master-1 systemd: Started Session 7 of user root.
+Dec 17 15:56:20 1-22-master-1 systemd-logind: New session 7 of user root.
+Dec 17 15:56:22 1-22-master-1 kubelet: E1217 15:56:22.507390    1363 container_manager_linux.go:507] "Failed to get container name for process" err="cpu and memory cgroup hierarchy not unified.  cpu: /system.slice/docker.service, memory: /"
+Dec 17 15:56:22 1-22-master-1 kubelet: E1217 15:56:22.507468    1363 container_manager_linux.go:549] "Failed to find cgroups of kubelet" err="cpu and memory cgroup hierarchy not unified.  cpu: /system.slice/kubelet.service, memory: /"

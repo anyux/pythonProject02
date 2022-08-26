@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/HitachiMailSendsver.iml" filepath="$PROJECT_DIR$/.idea/HitachiMailSendsver.iml" />
+      <module fileurl="file://D:/dataTest/.idea/dataTest.iml" filepath="D:/dataTest/.idea/dataTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../fileParse/.idea/fileParse.iml" filepath="$PROJECT_DIR$/../fileParse/.idea/fileParse.iml" />
+    </modules>
+  </component>
+</project>

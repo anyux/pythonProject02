@@ -1,0 +1,546 @@
+﻿server:
+  port: 8660
+
+personal:
+  config:
+    #MQrabbitmq
+    mqHost: 10.62.226.62
+    mqUsername: root
+    mqPassword: ffcsnss!@QW#$ER
+    mqPort: 5672
+    mqQueuename: m_webMsgQueuename3
+    mqQueuenameForCollect: m_webMsgQueuename10
+    mqExchange: m_webMsgExchange1
+
+spring:
+  profiles:
+    active: mysql
+hostproxy:
+  #新版agent配置
+  newagent:
+    #小型机操作系统
+    minicomputer: aix_32,aix_64,solaris_32,solaris_64,hpux_32,hpux_64
+    #agent服务端地址
+    agentServerUrl: http://127.0.0.1/updateSvr/null/receiveVersion
+    #0-旧版 1-新版
+    versionTag: 1
+    #agent上传临时目录
+    tempPath: c:/opt/nss/newAgent/temp
+    #agent目录
+    agentPath: c:/opt/nss/newAgent/zip
+    #中转脚本文件目录，请将压缩包内容至于该层
+    shellPath: c:/opt/nss/newAgent/runShell
+    #agent文件名正则
+    agentNameRegex: ^(ctff)_agent_[A-Za-z]+(_(32|64|32_64)|)-[0-9]\.[0-9]\.[0-9]\.(zip|tar.gz|tar)$
+    #agent服务端IP
+    serverIp: 192.168.39.205
+    #agent服务端端口
+    serverPort: 8331
+    #agent更新服务端IP
+    serverUpdateIp: 192.168.39.205
+    #agent更新服务端端口
+    serverUpdatePort: 8777
+    #日志采集接收端IP
+    logCollectServerIp: 192.168.39.205
+    #日志采集接收端端口
+    logCollectServerPort: 9000
+    #日志采集主机日志(1开启,其他不开)
+    logCollectServerOpenHost: 0
+    #日志采集应用日志(1开启,其他不开)
+    logCollectServerOpenApp: 0
+    #日志采集数据库日志(1开启,其他不开)
+    logCollectServerOpenDB: 0
+  app:
+    #小型机操作系统
+    minicomputer: AIX-5.3-64,HP-UNIX-B11.31-ia64,SunOS-5.10-64
+    #服务端ip地址及对应端口，多个使用逗号隔开
+    #    serviceIpAndPort: 172.168.1.1:8231,172.168.16.1:8231,127.0.0.1:8441,127.0.0.1:8541
+    #    serviceListenPort: 8231,8331,8441,8541
+    serviceIpAndPort: 218.85.154.10:8231,134.132.209.59:8231,172.18.127.248:8231,4.12.132.233:8231,10.231.136.58:8231,172.18.64.34:8231,115.168.165.238:8231,218.85.154.10:8331,134.132.209.59:8331,172.18.127.248:8331,4.12.132.233:8331,10.231.136.58:8331,172.18.64.34:8331,115.168.165.238:8331,218.85.154.10:8541,134.132.209.59:8541,172.18.127.248:8541,4.12.132.233:8541,10.231.136.58:8541,172.18.64.34:8541,115.168.165.238:8541
+    serviceListenPort: 8231,8232,8331,8441,8541
+    #线程池工作线程数量
+    WorkerThreads: 2000
+    #可空闲数量
+    CompletionPortThreads: 2000
+    batchPath: c:/test
+    #打包工具地址
+    packetTool:
+      path: c:/opt/nss/agentApp/packetTool
+    #windows-2000打包工具地址
+    packetTool-windows-2000:
+      path: c:/opt/nss/agentApp/packetToolWindows2000
+    #agent上传路径
+    update:
+      path: c:/opt/nss/agentApp/update
+    #批量安装基础环境路径
+    batchBase:
+      path: c:/opt/nss/agentApp/batchBase
+    #agent下载路径
+    zip:
+      path: c:/opt/nss/agentApp/zip
+    attributeIP: 172.20.1.211,172.1.1.1,129.2.2.1
+    updateIP: 172.20.1.112,122.1.1.2,135.5.5.5
+    #config center配置信息
+    udp_rule_msg_rev_port: 8441
+    rule_exec_send_port: 8331
+    asset_discover_port: 8231
+    rule_sleep_time: 3600
+    discover_sleep: 82800
+    system_status_sleep: 3600
+    #config center update 配置信息
+    update_tcp_listen_port: 8541
+    attribute_port: 9541
+#定时同步资产到soc系统定时器
+asset:
+  sms:
+    url: http://134.96.66.137:8088/send.sms
+    phoneNum: 18957112313
+
+  syn:
+    quartztimer: 0 0/1 * * * ?
+    #同步资产到soc服务器地址
+    url: http://127.0.0.1:8087/soc2_bases/services/assetServiceSyn?wsdl
+  #资产导出定级器
+  export:
+    quartztimer: 0 15 1 23 * ?
+    activeTag: false
+    socQuartztimer: 0 0 1 25-31 * ?
+    socActiveTag: false
+    incrementQuartztimer: 0 0 2 ? * 1,4
+    incActiveTag: false
+    #      test: 0/1 * * * * ?
+    #      testActiveTag: false
+    #每月23凌晨1点15分
+    #      quartztimer: 0 15 1 23 * ?
+    #每月最后一个工作日
+    #      socQuartztimer: 0 0 1 25-31 * ?
+    #每周1和周4
+  #     incrementQuartztimer: 0 0 2 ? * 1,4
+
+  report:
+    test:
+      quartztimer: 0/1 * * * * ?
+    day:
+      #quartztimer: 0 0 18 * * ?
+      #quartztimer: 0/1 * * * * ?
+      #每周日的中午十二点
+      #quartztimer: 0 0 12 ? * SUN
+      quartztimer: 0 0 12 ? * SUN
+      path: D:/opt/nss/upload/assetdayreport
+      mailAddrs:
+      mailServer:
+      mailUser:
+      mailPassword:
+      fromAddress:
+  synchronize:
+    baselineurl: http://172.168.0.206:8080/services/synDataService?wsdl
+  netExposure:
+    #    开关：1-开，0-关
+    startUp: 1
+    quartzTimer: 0 0 8 * * ?
+    #    quartzTimer: 0 */1 * * * ?
+    #第三方URL
+    cmdbUrl: http://127.0.0.1:8880/
+    cloudManageUrl: http://127.0.0.1:8880/
+  syncSelfAssessUrl: http://127.0.0.1:8880/
+  contentMonitor:
+    #    开关：1-开，0-关
+    startUp: 0
+    quartzTimer: 0 0 8 * * ?
+  situationAware:
+    #绿盟态势感知疑似失陷资产数审核状态更新
+    #    开关：1-开，0-关
+    startUp: 0
+    quartzTimer: 0 0 0 * * ?
+  #每日记录基线数据
+  baseline:
+    #    开关：1-开，0-关
+    startUp: 1
+    quartzTimer: 0 39 15 * * ?
+  baselineReport:
+    startUp: 0
+    quartzTimer: 0 0 4 * * ?
+
+  uptothirdplatform:
+    url: http://172.13.128.13:8843/service-interfaces/interfaces/alarmOrder
+
+#浙江-SOC部门、地域、业务系统、厂商同步4A 总开关：ON-开，OFF-关
+syncTo4ASwitch: OFF
+#与4A同步开关  业务系统和资产  ON-开，OFF-关
+syncTo4A:
+  businessFlag: 'OFF'
+  assetFlag: 'OFF'
+#是否同步非电信数据
+  isTelecomTag: true
+#线上4A版本 1-旧版 2-新版
+synTo4AVersion: 2
+#浙江业务系统上传拓扑图路径
+uploadTopology: D:/businessSys/
+
+unknow:
+  asset:
+    path: D:/opt/nss/upload/asset
+
+unknowAssetWeb:
+  junlihuayu:
+    url: https://www.hanlinsec.com/asset_discovery/china_telecom_api/
+    action: get
+    secret_key: GZ582E8D4F7ESF5SA1
+    province: qinghai
+    quartztimer: 0 0 1 * * ?
+
+provinceClient: false
+
+#山东网运资产IP类型修正定时器
+assetIpResetQuartz: 0 0 1 * * ?
+
+equipmentType: 31012
+#agent扫描周期 小时为单位
+#Agent异常告警分析规则：
+#网络不通/资产不存活；recetime是否每天更新24小时
+agentScanPeriod: 24
+#主机CPU异常；（例如阈值高过85%）
+#主机内存异常；
+#AgentCPU异常；（例如阈值高过50%）
+#Agent内存异常；
+#Agent进程异常；JreError ，KillProgram 当天新增数量
+#agentExceptionRule:
+#  systemCpuThresholdValue: 0.85
+#  systemMemThresholdValue: 0.85
+#  agentCpuThresholdValue: 0.5
+#  agentMemThresholdValue: 0.5
+#  progressThresholdValue: 10
+#AgentCPU状态（5） 10%以内  5分；10-20%  3分； 20%以上0分；
+#Agent内存（5）      10%以内  5分；10-20% 3分； 20%以上0分；
+#系统CPU状态（5） 70% 以内 5分；70-80%  3分； 80以上0分；
+#系统内存状态（5） 70% 以内 5分；70-80%  3分； 80以上0分；
+#Agent中转并发性（10）  无中转10分；
+agentHealthRule:
+  systemCpuFivePoint: 0.70
+  systemCpuThreePoint: 0.80
+  systemMemFivePoint: 0.70
+  systemMemThreePoint: 0.80
+  agentCpuFivePoint: 0.10
+  agentCpuThreePoint: 0.20
+  agentMemFivePoint: 0.10
+  agentMemThreePoint: 0.20
+  transferFivePoint: 5
+  transferThreePoint: 10
+  cycleDayTenPoint: 2
+  cycleDayFivePoint: 5
+agentHealthy:
+  activate: false
+  quartztimer: 0 */3 * * * ?
+#资产上报集团
+agentResultImport:
+  #资产上报集团路径
+  uploadUrl: http://127.0.0.1:50020/sa-server/SAAPI/saveAssetData.api
+  #是否资产上报集团   true：是   false：否
+  isOpen: false
+  regex:
+    apps:
+      projects:
+        jars:
+          name: ^.*(\\d\\.\\d\\.\\d).*$
+assetFTP:
+  Venus:
+    day:
+      quartztimer: 0 */3 * * * ?
+  #河北资产数据传输任务
+  asset:
+    transport: 0 30 14 ? * WED
+    #资产过滤类型
+    type: 1,5
+
+cmdb:
+  sftpIp: 192.168.1.106
+  sftpPort: 22
+  sftpPassword: 123456
+  sftpUserName: test
+  sftpPath: /Users/mac/test
+  #河北资产文件传输FTP保存地址
+  assetPath:
+
+#同步映射表到ip表
+synIp:
+  #每天0时
+  quartztimer: 0 20 20 * * ?
+
+offline:
+  #agent离线导入配置
+  agent:
+    #0-旧版 1-新版
+    versionTag: 1
+    #资产离线文件接口
+    assetInfoUrl: http://192.168.102.74:6810/assetSvr/222/uploadOfflineData
+    #基线离线文件接口
+    baselineAllUrl: http://192.168.102.74:6810/baselineSvr/222/uploadTemplateResult
+
+admittance:
+  scannerId: 121
+
+jcUploadTopology: static
+
+#检测未知资产是否已处理定时
+assetValidTag:
+  quartztimer: 0 0 0 * * ?
+#安全评估报告
+#基线合规率整改情况：设置阈值：大于或等于85%
+#漏洞整改情况：设置阈值：无中高危漏洞
+#WEB漏洞整改情况：设置阈值：无漏洞
+#弱口令整改情况：设置阈值：无弱口令
+safetyAssessReport:
+  savePath: static/SafetyAssessmentReport/report
+  baseLineThresholdValue: 85.00
+  hostMidAndHighVulThresholdValue: 0
+  webVulThresholdValue: 0
+  weakVulThresholdValue: 0
+#南京智慧家庭  cmdb
+nanjing:
+  cmdb:
+    sysDateStr: 2020-04-01 00:00:00
+    transferUrl: http://127.0.0.1:8966/getJsonObj
+    activate: false
+    quartztimer: 0 0/1 * * * ?
+
+#floorLength 每层所在的长度 如：1000 则每个的横坐标将随机X从0-1000中取
+#floorWide 每层所在的宽度 将与设备所在层决定纵坐标
+#如 floorWide为500   exchangeFloor为3 那纵坐标Y 将取 3*500 +随机500 即1500-2000
+#建议目前每层所在层次隔开
+#routeFloor 路由器所在层
+#exchangeFloor 交换机所在层
+#firewallFloor 防火墙所在层
+#serviceFloor 服务器所在层
+routeManage:
+  floorLength: 1500
+  floorWide: 200
+  routeFloor: 1
+  exchangeFloor: 3
+  firewallFloor: 2
+  serviceFloor: 4
+  avgFloorLength: 30
+  appImage: "static/topo/images/system/3a.svg,static/topo/images/system/4a.svg,static/topo/images/system/soc.svg,static/topo/images/other/other9.svg,static/topo/images/other/other10.svg,\
+               static/topo/images/other/other15.svg,static/topo/images/router/router1.svg,static/topo/images/router/router2.svg,static/topo/images/router/router3.svg,static/topo/images/exchange/exchange1.svg,\
+               static/topo/images/exchange/exchange2.svg,static/topo/images/exchange/exchange3.svg,static/topo/images/other/other2.svg,static/topo/images/other/other3.svg,static/topo/images/other/other4.svg,\
+               static/topo/images/other/other5.svg,static/topo/images/other/other7.svg,static/topo/images/other/other8.svg,static/topo/images/other/other11.svg,static/topo/images/other/other12.svg,\
+               static/topo/images/other/other13.svg,static/topo/images/other/other14.svg,static/topo/images/other/other6.svg,static/topo/images/other/other15.svg,static/topo/images/other/yellow-yun.svg"
+  color: "#FFFFFF"
+  fontColor: "#000000"
+  fontSize: 12
+  #定时器 active false关闭 ture开启
+  activate: false
+  quartztimer: 0 */3 * * * ?
+  hitActivate: false
+  hitQuartztimer: 0 */3 * * * ?
+#scp 发送给后端机子文件
+#  host: 后端机子地址
+#  userName:后端机子账户
+#  password: 后端机子密码
+#  sourcePath: 前端文件保存地址
+#  targetPath: 后端文件保存地址
+#  timeout: 连接后端机子超时时间
+scp:
+  host: 192.168.39.203
+  userName: root
+  password: FcssAgent@1003
+  sourcePath: static/uploadFile
+  targetPath: /opt/uploadFile
+  timeout: 30000
+  port: 22
+
+assetSafeCheckUrl: http://ip:port/baselineSvr/66/receiveNonITBaselineData
+
+#定时删除代理历史数据
+agentStatusHis:
+  scheduler:
+    deleteDayTime: 0 00 23 * * ?
+
+#甘肃定时归并agent资产及手工录入资产
+mergerAssetAgentManualGS:
+  isOpen: false
+  quartztimer: 0 */1 * * * ?
+
+#西藏定时删除七天未更新的应用系统资产
+notUpdatedApplicationAsset:
+  isOpen: false
+  quartztimer: 0 0 0 */1 * ?
+#新疆资产业务系统调用第三方同步接口
+xinjiangAssetBusinessSync:
+  assetInterface: http://127.0.0.1/interface
+  scheduler:
+    quartztimer: 0 0 12 * * ?
+    isOpen: false
+    businessInterface: http://127.0.0.1/interface
+
+qinghai:
+  bigscreen:
+    quartztimer:
+      #日上报定时器
+      day: 0/3 * * * * ?
+      dayActive: false
+      #月上报定时器
+      month: 0/3 * * * * ?
+      monthActive: false
+    #本地生成的上传文件存放路径，相对路径，默认不需要修改。
+    localPath: static/qinghaibigscreen/sftp/
+    sftp[0]:
+      #认证方式  1-sftp密码认证、2-sftp秘钥认证、3-ftp密码认证、4-本地路径文件
+      authType: 1
+      host: 192.168.160.132
+      port: 22
+      userName: root
+      password: Root1234
+      privateKey:
+      #上传sftp服务器的根路径，目标路径
+      sourcePath: /home/sftp/ftpuser1
+      targetPath: /home/sftp/ftpuser1
+      #parseType: 2
+
+#每月一号2点统计上月数据
+trend:
+  reportStatistics:
+    quartztimer: 0 0 2 1 * ?
+  assetsAnalysis:
+    quartztimer: 0 0 2 1 * ?
+
+
+StatisticAsset:
+  activate: false
+  quartztimer: 0 */3 * * * ?
+
+mail:
+  #是否ssl
+  isSSL: true
+  #定时发送邮箱
+  quartztimer: 0 0 0 21 */1 ?
+
+
+webasset:
+  uptothirdplatform:
+    quartztimer: 0 0 2 1 * ?
+    url: http://172.20.134.48:8080/interfaces/outAssets
+
+#AGENT异常记录 统计报表
+agentExceptionRecord:
+  #true=开启 false-关闭
+  flag: false
+  #每日凌晨开始任务，统计前一天异常agent
+  quartztimer: 0 30 0 * * ?
+
+safedog:
+  host: http://192.168.39.235:9123
+  #  同步risk表数据和riskCount表数据,体检结果数据
+  sdAgentRiskInfoTime: 0 0 0/5 * * ?
+  # 同步sd_agent_info sa资产表数据
+  sdAgentInfoTime: 0 0 0/5 * * ?
+  #关闭定时任务的时候出现的用户名
+  userName: xielh
+  privateKey: s4
+  appid: p70171k8
+
+#月报（定级备案清单和资产信息清单）
+month:
+  rating:
+    quartz: 0 0 3 20 * ?
+    switch: true
+  asset:
+    quartz: 0 30 3 20 * ?
+    switch: true
+
+#福建基线历史数据统计
+baselineHis:
+  #true=开启 false-关闭
+  flag: false
+  #每日更新频率，可配置 0 0 1 * * ?
+  quartztimer: 0 05 16 * * ?
+
+anBoTong:
+  ipAddress: http://135.224.42.170
+  accessToken: 0d456853-5c9e-424b-a034-7e58a7ba9950
+  cron: 0 0 0 */1 * ?
+  enabled: false
+#安全业务态势
+businessSituation:
+  #定时器
+  scheduler:
+    #1=开启
+    switch: 0
+    #每天固定0 6 12 18 时执行一次  0 0 0,6,12,18 * * ?
+    quartztimer: 0 */1 * * * ?
+  #大屏配置
+  bigscreen:
+    #配置要展示的部门(单元) 以,为间隔
+    departIds: 1,2,3,62
+    #维度统计值合格线 默认60
+    qualifiedLine: 60
+    #折线图 统计时间维度 单位天
+    timeUnit: 7
+    #资产完整性是否后台计算 0-否 以输入值为准 1-公式计算
+    assetFlag: 1
+    #系统脆弱性是否后台计算 0-否 以输入值为准 1-公式计算
+    vulFlag: 1
+    #文档合规性是否后台计算 0-否 以输入值为准 1-公式计算
+    docFlag: 1
+
+
+# 湖南配置
+hunan:
+  # 未知资产配置
+  rectified: 1
+
+#湖南创发接口
+iface:
+  #start-标记是否开启这个功能
+  #token相关数据
+  token:
+    client_id: SOCa1832e5b4dbc48a7bd23438da47b2a22
+    client_secret: SOC6jeeVV5flbrS6WgVCpFNpxjXHkVpn119
+    username: JSDX_CFagent
+    password: jsdx_SOC@2020
+  #通知创发发生ftp文件
+  createftpfile:
+    #通知接口
+    transfarNoticeUrl: http://134.175.64.37:7080/iface/ActionAPI/notice.api
+    #定时器
+    quartztimer: 0 0 0 * * ?
+  #it资产配置
+  assetInfo:
+    #全量更新资产的绝对
+    sftpPath: /s/w/
+    #全量更新资产的定时器
+    quartztimer: 0 0 0 * * ?
+  #非it资产配置
+  assetbyftpNonIt:
+    #ftp路径
+    sftpPath: C:/Users/lzr/Desktop/项目需求/soc2/湖南/20210325-菜单迁移/20210615资产FTP文件/
+    #定时器
+    quartztimer: 0 0 0 * * ?
+    #对错误的非it资产再进行一次检测
+    erroQuartztimer: 0 10 0 * * ?
+    #删除错误的非it资产
+    managerThread: 0 0 20 ? * *
+  #获取token的接口
+  tokenUrl: http://134.175.64.37:7080/iface/oauth2/access_token.api
+  #基线json导入接口
+  transfarsSaveDataByJsonUrl: http://134.175.64.37:7080/iface/ActionAPI/saveSafeData.api
+  #资产增删改接口
+  transfarAssetUpdateUrl: http://134.175.64.37:7080/iface/ActionAPI/socAssetUpd.api
+  businessInfo:
+    # 修改，新增，删除业务系统的接口
+    syncBusinessToTransfarUrl: http://134.175.64.37:7080/iface/ActionAPI/system.api
+    syncBusinessToTransfarFlag: false
+
+xinjiang:
+  baselineAgentUrl: http://127.0.0.1/
+
+#政务网业务系统的资产部门数据，特殊处理
+netManageAsset:
+  businessId: 1105
+
+#领导视图 更新自动采集数据
+leadView:
+  #是否定时更新数据 是-true 否-false
+  flag: false
+  quartztimer: 0 0 22 * * ?
+  #IT支撑中心部门ID
+  departId: 2

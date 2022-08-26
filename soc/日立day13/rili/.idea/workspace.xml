@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7455b71b-adf3-4510-974d-f6c7a2f7211c" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1b9hoMNO51SXSIii25FR1oUnga7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="RunManager" selected="Python tests.Unittests in dataTest">
+    <configuration name="MailSend" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="HitachiMailSendsver" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/MailSend.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="jsonParse" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="fileParse" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../fileParse" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../fileParse/jsonParse.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in dataTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="dataTest" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="D:/dataTest" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;D:/dataTest&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Unittests in dataTest" />
+        <item itemvalue="Python.MailSend" />
+        <item itemvalue="Python.jsonParse" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7455b71b-adf3-4510-974d-f6c7a2f7211c" name="Default Changelist" comment="" />
+      <created>1588050390695</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588050390695</updated>
+      <workItem from="1588050393382" duration="30000" />
+      <workItem from="1588050432161" duration="63000" />
+      <workItem from="1592636696256" duration="776000" />
+      <workItem from="1592728673481" duration="105000" />
+      <workItem from="1592759779445" duration="200000" />
+      <workItem from="1593021924387" duration="118000" />
+      <workItem from="1593093170807" duration="1212000" />
+      <workItem from="1593114142180" duration="117000" />
+      <workItem from="1593220560360" duration="249000" />
+      <workItem from="1593263250194" duration="65000" />
+      <workItem from="1593454813448" duration="203000" />
+      <workItem from="1593539718015" duration="85000" />
+      <workItem from="1593714601530" duration="195000" />
+      <workItem from="1593771256848" duration="2748000" />
+      <workItem from="1593881250043" duration="100000" />
+      <workItem from="1593938759621" duration="718000" />
+      <workItem from="1593971323604" duration="140000" />
+      <workItem from="1594120278987" duration="707000" />
+      <workItem from="1594142255721" duration="379000" />
+      <workItem from="1594178541786" duration="1222000" />
+      <workItem from="1594287309935" duration="661000" />
+      <workItem from="1594289850048" duration="185000" />
+      <workItem from="1594304788472" duration="601000" />
+      <workItem from="1594316943293" duration="256000" />
+      <workItem from="1594406857236" duration="193000" />
+      <workItem from="1594481105140" duration="699000" />
+      <workItem from="1594723093757" duration="135000" />
+      <workItem from="1594747517512" duration="110000" />
+      <workItem from="1594828045615" duration="493000" />
+      <workItem from="1594896590455" duration="127000" />
+      <workItem from="1594919280800" duration="135000" />
+      <workItem from="1594994117160" duration="750000" />
+      <workItem from="1595006928363" duration="599000" />
+      <workItem from="1595072624806" duration="114000" />
+      <workItem from="1595175952486" duration="12000" />
+      <workItem from="1595265002152" duration="71000" />
+      <workItem from="1595492661992" duration="1169000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1595494221665">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/-1280.-91.1280.984@0.0.1536.824" timestamp="1588050493131" />
+    <state x="-1234" y="44" key="FileChooserDialogImpl/0.0.1536.824/-1920.-167.1920.1040@-1920.-167.1920.1040" timestamp="1593771549273" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1595494221665" />
+    <state width="1877" height="535" key="GridCell.Tab.0.bottom" timestamp="1595265072765">
+      <screen x="-1920" y="-167" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="535" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.-167.1920.1040@-1920.-167.1920.1040" timestamp="1595265072765" />
+    <state width="1493" height="382" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.-167.1920.1040@0.0.1536.824" timestamp="1594142634016" />
+    <state width="1877" height="575" key="GridCell.Tab.0.bottom/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593022041814" />
+    <state width="1493" height="406" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1594896716807" />
+    <state width="1877" height="535" key="GridCell.Tab.0.center" timestamp="1595265072765">
+      <screen x="-1920" y="-167" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="535" key="GridCell.Tab.0.center/0.0.1536.824/-1920.-167.1920.1040@-1920.-167.1920.1040" timestamp="1595265072765" />
+    <state width="1493" height="382" key="GridCell.Tab.0.center/0.0.1536.824/-1920.-167.1920.1040@0.0.1536.824" timestamp="1594142634016" />
+    <state width="1877" height="575" key="GridCell.Tab.0.center/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593022041813" />
+    <state width="1493" height="406" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1594896716807" />
+    <state width="1877" height="535" key="GridCell.Tab.0.left" timestamp="1595265072765">
+      <screen x="-1920" y="-167" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="535" key="GridCell.Tab.0.left/0.0.1536.824/-1920.-167.1920.1040@-1920.-167.1920.1040" timestamp="1595265072765" />
+    <state width="1493" height="382" key="GridCell.Tab.0.left/0.0.1536.824/-1920.-167.1920.1040@0.0.1536.824" timestamp="1594142634016" />
+    <state width="1877" height="575" key="GridCell.Tab.0.left/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593022041813" />
+    <state width="1493" height="406" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1594896716806" />
+    <state width="1877" height="535" key="GridCell.Tab.0.right" timestamp="1595265072765">
+      <screen x="-1920" y="-167" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="535" key="GridCell.Tab.0.right/0.0.1536.824/-1920.-167.1920.1040@-1920.-167.1920.1040" timestamp="1595265072765" />
+    <state width="1493" height="382" key="GridCell.Tab.0.right/0.0.1536.824/-1920.-167.1920.1040@0.0.1536.824" timestamp="1594142634016" />
+    <state width="1877" height="575" key="GridCell.Tab.0.right/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593022041813" />
+    <state width="1493" height="406" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1594896716807" />
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1595493643715">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824/-1280.-91.1280.984@0.0.1536.824" timestamp="1588050433585" />
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824/-1920.-167.1920.1040@-1920.-167.1920.1040" timestamp="1595265035531" />
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824/-1920.-167.1920.1040@0.0.1536.824" timestamp="1594060922682" />
+    <state x="2481" y="298" key="com.intellij.ide.util.TipDialog/0.0.1536.824/1920.0.1920.1040@1920.0.1920.1040" timestamp="1593021925545" />
+    <state x="449" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1595493643715" />
+    <state x="-1297" y="58" width="672" height="678" key="search.everywhere.popup" timestamp="1593772772111">
+      <screen x="-1920" y="-167" width="1920" height="1040" />
+    </state>
+    <state x="-1297" y="58" width="672" height="678" key="search.everywhere.popup/0.0.1536.824/-1920.-167.1920.1040@-1920.-167.1920.1040" timestamp="1593772772111" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/HitachiMailSendsver$MailSend.coverage" NAME="MailSend Coverage Results" MODIFIED="1595265008720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/HitachiMailSendsver$jsonParse.coverage" NAME="jsonParse Coverage Results" MODIFIED="1593772780017" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../fileParse" />
+  </component>
+</project>

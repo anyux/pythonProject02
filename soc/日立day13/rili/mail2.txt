@@ -1,0 +1,15 @@
+告警ID：4873565(4873569)
+告警名称: 检测到恶意对象
+告警等级: 2
+发生时间: 2021-11-05 08:26:17
+告警设备: Hong Kong Kaspersky 07(10.97.244.7)
+告警内容: 检测到恶意对象
+告警时间: 2021-11-05 08:26:17
+来源IP: 10.97.67.36
+Hash: 8787496f84b788a7ecfffc2563c9fc7f787eedc99608a770ff046daa148284c5
+恶意对象路径:E:\\$RECYCLE.BIN\\S-1-5-21-2460280860-2823173241-3174630117-1207883\\$R29GHBJ\\VB.NET\\EURCONV\\EURCONV\\obj\\Release\\EURCONV.exe
+告警动作: Full Scan Version 11.0.1 (Weekly-Friday) (Hitachi Group)
+告警原因: VHO:Trojan.MSIL.Convagent.gen
+影响设备: 10.97.244.7
+事件描述: 检测到恶意对象
+建议事项: 检测到此文件为可执行文件,建议检查文件是否为正常文件，可配置卡巴斯基白名单,避免出现误报情况

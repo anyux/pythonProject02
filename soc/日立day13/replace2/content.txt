@@ -1,0 +1,1 @@
+由于ServiceAccount Controller与Token Controller是与安全相关的两个控制器, 并且与Service Account, Token密切相关, 所以会在后续的章节中对它们进行分析. 而Router Controller是公有云厂商提供的进行节点扩缩容时管理节点路由的控制器, 比如谷歌GCE平台里动态添加一个虚机节点作为Node节点时, 相应的路由策略, 防火墙规则等配置无须用户手工设置, 都能依靠Router Controller自动完成.

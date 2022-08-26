@@ -1,0 +1,88 @@
+spring:
+  datasource:
+    #mysql
+#    driverClassName: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://192.168.39.212:3306/zjnsoc?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&serverTimezone=GMT%2B8
+#    username: root
+#    password: FcssAgent@1003
+
+    #oracle
+    driverClassName: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=10.62.226.60)(PORT=1521))(CONNECT_DATA=(SERVER=DEDICATED)(SERVICE_NAME=NSSRACDB)))
+    username: nsoc
+    password: BiGData922
+
+    #oscar
+#    driverClassName: com.oscar.Driver
+#    url: jdbc:oscar://127.0.0.1:2003/NSOC
+#    username: NSOC
+#    password: NSOC
+
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      #初始化大小
+      initial-size: 3
+      #最大连接数
+      max-active: 5000
+      #最小连接数
+      min-idle: 10
+      #获取连接等待超时时间
+      max-wait: 60000
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+      #间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      time-between-eviction-runs-millis: 60000
+      #一个连接在池中最小生存的时间，单位是毫秒
+      min-evictable-idle-time-millis: 300000
+      #检查池中的连接是否仍可用的 SQL 语句,drui会连接到数据库执行该SQL, 如果正常返回，则表示连接可用，否则表示连接不可用
+      validation-query: SELECT 1 FROM DUAL
+      #当程序请求连接，池在分配连接时，是否先检查该连接是否有效。(高效)
+      test-while-idle: true
+      #程序 申请 连接时,进行连接有效性检查（低效，影响性能）
+      test-on-borrow: false
+      #程序 返还 连接时,进行连接有效性检查（低效，影响性能）
+      test-on-return: false
+      #要求程序从池中get到连接后, N 秒后必须close,否则druid 会强制回收该	false,当发现程序有未连接,不管该连接中是活动还是空闲, 以防止进程不会进行close而霸占连接
+      remove-abandoned: true
+      #设置druid 强制回收连接的时限，当程序从池中get到连接开始算起，超过此应大于业务运行最长时间值后，druid将强制回收该连接，单位秒。
+      remove-abandoned-timeout: 7200
+      stat-view-servlet:
+        enabled: true
+        url-pattern: /druid/*
+        login-username: admin
+        login-password: Ffcsnss12qw#$ER%
+      filter:
+        stat:
+          log-slow-sql: true
+          slow-sql-millis: 1000
+          merge-sql: true
+        wall:
+          config:
+            multi-statement-allow: true
+#mybatis
+mybatis-plus:
+  mapper-locations: classpath*:com/soc/cloud/**/mapper/xml/*Mapper.xml
+  type-aliases-package: com.soc.cloud.**.mod*l
+  global-config:
+    #数据库相关配置
+    db-config:
+      #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID", ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
+      #id-type: INPUT
+      id-type-map: {com.mysql.jdbc.Driver: AUTO, com.mysql.cj.jdbc.Driver: AUTO, oracle.jdbc.driver.OracleDriver: INPUT, com.oscar.Driver: INPUT}
+      #主键类型  AUTO:"数据库ID自增", INPUT:"用户输入ID", ID_WORKER:"全局唯一ID (数字类型唯一ID)", UUID:"全局唯一ID UUID";
+      id-type: ${mybatis-plus.global-config.db-config.id-type-map.${spring.datasource.driverClassName}}
+      #字段策略 IGNORED:"忽略判断",NOT_NULL:"非 NULL 判断"),NOT_EMPTY:"非空判断"
+      field-strategy: NOT_NULL
+      #驼峰下划线转换
+      column-underline: true
+    banner: false
+  #Mybatis原生配置
+  configuration:
+    #是否开启自动驼峰命名规则（camel case），默认true
+    map-underscore-to-camel-case: true
+    #是否开启Mybatis二级缓存，默认true
+    cache-enabled: false
+    #指定当结果集中值为 null 的时候是否调用映射对象的 Setter（Map 对象时为 put）方法，默认false
+    call-setters-on-nulls: true
+    #当没有为参数指定特定的 JDBC 类型时，空值的默认 JDBC 类型，默认other
+    jdbc-type-for-null: 'null'
